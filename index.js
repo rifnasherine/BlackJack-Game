@@ -5,18 +5,12 @@ let hasBlackJack = false
 let isAlive = false
 let hasStarted = false
 let message ="";
-let player = {
-    name : "Rifna",
-    coins : 150
-}
 
 let messageEl = document.getElementById("message-el")
 let cardEl = document.getElementById("card-el")
-//let sumEl = document.getElementById("sum-el")
 let sumEl = document.querySelector("#sum-el")
-let playerEl = document.getElementById("player-el")
 
-playerEl.textContent = player.name + ": $" + player.coins
+//to draw random cards
 function getRandomCard(){
     let randomNumber = Math.floor(Math.random()*13)+1
     if(randomNumber==1){
@@ -27,6 +21,8 @@ function getRandomCard(){
     }
     return randomNumber
 }
+
+//to start the game
 function startGame(){
     hasStarted = true
     isAlive = true
@@ -38,6 +34,8 @@ function startGame(){
     sum+=cards[0]+cards[1]
     renderGame()
 }
+
+//to render the game based on changes
 function renderGame(){
     cardEl.textContent = "Cards: "
     for(let i=0; i<cards.length; i++){
@@ -58,6 +56,7 @@ function renderGame(){
     messageEl.textContent = message;  
 }
 
+//when drawing new card
 function newCard(){
     if(isAlive && !hasBlackJack){
     let newCard = getRandomCard()
@@ -77,4 +76,5 @@ function newCard(){
     
     
 }
+
 
