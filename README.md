@@ -1,6 +1,7 @@
 # 🃏 Blackjack Game
 
 A simple implementation of the classic Blackjack game using HTML, CSS, and JavaScript.
+🔗 **[Play the Live Demo Here](https://games-black-jack.netlify.app/)**
 
 ## 💡 Features
 
